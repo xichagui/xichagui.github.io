@@ -11,5 +11,52 @@
 </head>
 <body>
 	<h1>Hello World!</h1>
+	<ul>
+		<ol>
+			<a href="#">导航链接1</a>
+			<a href="#">导航链接2</a>
+			<a href="#">导航链接3</a>
+			<a href="#">导航链接4</a>
+		</ol>
+	</ul>
+	<h2>文章一级标题</h2>
+	<h3>文章二级标题</h3>
+	<p>文章作者&nbsp;发表时间</p>
+	<p>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，换行了</br>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，换行了</br>这是一个很长的段落，这是一个很长的段落，<a href="http:www.baidu.com">这里有一个链接到baidu</a>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这里有个<strong>粗体字</strong>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，</p>
+	<img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1471090013&di=50dcdb0acd11422ed029473d1825718f&src=http://img4.duitang.com/uploads/item/201503/20/20150320222015_SVfKv.jpeg" alt="东条希">
+	<p></p>
 </body>
+<script type="text/javascript">
+	function smallestCommons(arr) {
+  arr = arr.sort(function(a, b){
+    return a - b;
+  });
+  var arr1 = [];
+  var scms = 1;
+  for (var i = arr[0]; i <= arr[1]; i++) {
+  	scms = scm(scms, i);
+  }
+  return scms;
+}
+function scm(a, b) {
+  if (a > b) {
+    var temp = a;
+    a = b;
+    b = temp;
+  }
+  var tempA = a;
+  var tempB = b;
+  while (tempA !== 0) {
+    mod = tempB % tempA;
+    tempB = tempA;
+    tempA = mod;
+    console.info(tempA+" "+tempB+" "+mod);
+  }
+  return a * b / tempB;
+}
+
+
+console.info(smallestCommons([1,5]));
+
+</script>
 </html>
